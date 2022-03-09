@@ -19,7 +19,9 @@ public class Objekti : MonoBehaviour {
 	public bool vaiIstajaVieta = false;
 	public GameObject pedejaisVilktais = null;
 	void Start () {
-		
+		atkrKoord = atkritumaMasina.GetComponent<RectTransform> ().localPosition;	
+		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;	
+		bussKoord = autobuss.GetComponent<RectTransform> ().localPosition;	
 	}
 
 	void Update () {
