@@ -8,6 +8,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject atraPalidziba;
 	public GameObject autobuss;
 	public GameObject b2;
+	public GameObject e46;
 	[HideInInspector]
 	public Vector2 atkrKoord;
 	[HideInInspector]
@@ -16,6 +17,8 @@ public class Objekti : MonoBehaviour {
 	public Vector2 bussKoord;
 	[HideInInspector]
 	public Vector2 b2Koord;
+	[HideInInspector]
+	public Vector2 e46Koord;
 	public AudioSource skanasAvots;
 	public AudioClip[] skanasKoAtskanot;
 	[HideInInspector]
@@ -26,6 +29,7 @@ public class Objekti : MonoBehaviour {
 		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;	
 		bussKoord = autobuss.GetComponent<RectTransform> ().localPosition;	
 		b2Koord = b2.GetComponent<RectTransform> ().localPosition;
+		e46Koord = e46.GetComponent<RectTransform> ().localPosition;
 	}
 
 	void Update () {

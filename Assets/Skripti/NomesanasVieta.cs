@@ -36,6 +36,9 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					case "b2":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [4]);
 						break;
+					case "e46":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
+						break;
 					default:
 						Debug.Log ("Nedefinēts tags!");
 						break;
@@ -57,6 +60,10 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "b2":
 					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.bussKoord;
 					break;
+				case "e46":
+					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.bussKoord;
+					break;
+
 				default:
 					Debug.Log ("Nedefinēts tags!");
 					break;
