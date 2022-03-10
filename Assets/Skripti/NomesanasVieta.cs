@@ -39,6 +39,24 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					case "e46":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
 						break;
+					case "Eskavators":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [6]);
+						break;
+					case "Policija":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [7]);
+						break;
+					case "TraktorsDz":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [8]);
+						break;
+					case "TraktorsZal":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [9]);
+						break;
+					case "Cements":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
+						break;
+					case "Ugunsdzesejs":
+						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [10]);
+						break;
 					default:
 						Debug.Log ("Nedefinēts tags!");
 						break;
@@ -58,10 +76,28 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.bussKoord;
 					break;
 				case "b2":
-					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.bussKoord;
+					objektuSkripts.b2.GetComponent<RectTransform> ().localPosition = objektuSkripts.b2Koord;
 					break;
 				case "e46":
-					objektuSkripts.autobuss.GetComponent<RectTransform> ().localPosition = objektuSkripts.bussKoord;
+					objektuSkripts.e46.GetComponent<RectTransform> ().localPosition = objektuSkripts.e46Koord;
+					break;
+				case "Eskavators":
+					objektuSkripts.Eskavators.GetComponent<RectTransform> ().localPosition = objektuSkripts.EskKoord;
+					break;
+				case "Policija":
+					objektuSkripts.Policija.GetComponent<RectTransform> ().localPosition = objektuSkripts.PolKoord;
+					break;
+				case "TraktorsDz":
+					objektuSkripts.TraktorsDz.GetComponent<RectTransform> ().localPosition = objektuSkripts.TDzKoord;
+					break;
+				case "TraktorsZal":
+					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.CemeKoord;
+					break;
+				case "Cements":
+					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.UgunsKoord;
+					break;
+				case "Ugunsdzesejs":
+					objektuSkripts.TraktorsZal.GetComponent<RectTransform> ().localPosition = objektuSkripts.TZalKoord;
 					break;
 
 				default:
