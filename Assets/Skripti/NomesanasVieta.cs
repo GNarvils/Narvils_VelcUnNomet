@@ -54,7 +54,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					case "Cements":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
 						break;
-					case "Ugunsdzesejs":
+					case "Ugundzesejs":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [10]);
 						break;
 					default:
@@ -96,7 +96,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				case "Cements":
 					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.UgunsKoord;
 					break;
-				case "Ugunsdzesejs":
+				case "Ugundzesejs":
 					objektuSkripts.TraktorsZal.GetComponent<RectTransform> ().localPosition = objektuSkripts.TZalKoord;
 					break;
 
