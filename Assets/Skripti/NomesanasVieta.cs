@@ -8,7 +8,6 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmeruStarp, yIzmeruStarp;
 	public Objekti objektuSkripts;
-	public int punkti1;
 	public void OnDrop(PointerEventData notikums){
 		if (notikums.pointerDrag != null) {
 			if (notikums.pointerDrag.tag.Equals (tag)) {
@@ -19,6 +18,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 				velkObjIzm = GetComponent<RectTransform> ().localScale;
 				xIzmeruStarp = Mathf.Abs (vietasIzm.x - velkObjIzm.x);
 				yIzmeruStarp = Mathf.Abs (vietasIzm.y - velkObjIzm.y);
+				//Ja pareizi uzlikta 
 				if ((rotacijasStarpiba <= 6 || (rotacijasStarpiba >= 354 && rotacijasStarpiba <= 360)) && (xIzmeruStarp <= 0.1 && yIzmeruStarp <= 0.1)) {
 					objektuSkripts.vaiIstajaVieta = true;
 					notikums.pointerDrag.GetComponent<RectTransform> ().anchoredPosition = GetComponent<RectTransform> ().anchoredPosition;
@@ -26,6 +26,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					notikums.pointerDrag.GetComponent<RectTransform> ().localScale = GetComponent<RectTransform> ().localScale;
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
+						//Atskano skanu un skaita punktus.
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [1]);
 						objektuSkripts.punkti++;
 						break;
@@ -75,6 +76,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					}
 				}
 			} else {
+				//Ja nepareizi uzlikta.
 				objektuSkripts.vaiIstajaVieta = false;
 				objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [0]);
 				switch (notikums.pointerDrag.tag) {
@@ -119,9 +121,23 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 			}
 
 		}
+		//Uzvara
 		if (objektuSkripts.punkti == 11) {
+			//parada uzvaras logu un restartēšanas pogu;
 			objektuSkripts.uzvarasPanelis.SetActive (true);
+			objektuSkripts.restartPoga.SetActive (true);
 			objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [11]);
+			objektuSkripts.laiksAktivs = false;
+			objektuSkripts.parada.text = "Jūs pabeidzāt spēli    "+Mathf.Round(objektuSkripts.laiks).ToString ()+" sekundēs!";
+			if (objektuSkripts.laiks <= 150) {
+				objektuSkripts.zvaigzne1.SetActive (true);
+			}
+			if (objektuSkripts.laiks <= 100) {
+				objektuSkripts.zvaigzne2.SetActive (true);
+			}
+			if (objektuSkripts.laiks <= 60) {
+				objektuSkripts.zvaigzne3.SetActive (true);
+			}
 		}
    }
 

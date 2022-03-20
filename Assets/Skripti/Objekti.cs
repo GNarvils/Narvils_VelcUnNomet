@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Objekti : MonoBehaviour {
 	public Canvas kanva;
+	//SpelesObjekti
 	public GameObject atkritumaMasina;
 	public GameObject atraPalidziba;
 	public GameObject autobuss;
@@ -15,6 +18,7 @@ public class Objekti : MonoBehaviour {
 	public GameObject TraktorsZal;
 	public GameObject Cements;
 	public GameObject Ugunsdzeseji;
+	//SpelesObjektuKoordinates
 	[HideInInspector]
 	public Vector2 atkrKoord;
 	[HideInInspector]
@@ -43,7 +47,16 @@ public class Objekti : MonoBehaviour {
 	public bool vaiIstajaVieta = false;
 	public GameObject pedejaisVilktais = null;
 	public int punkti=0;//Punkti;
-	public GameObject uzvarasPanelis;
+	public GameObject uzvarasPanelis;//Uzvaras logs
+	public GameObject restartPoga;//Restartesanas poga
+	//Zvaigznu vertejums
+	public GameObject zvaigzne1;
+	public GameObject zvaigzne2;
+	public GameObject zvaigzne3;
+	public float laiks;
+	public bool laiksAktivs=true;
+	public Text parada;
+
 
 	void Start () {
 		//Dabu masinu koordinates
@@ -60,9 +73,14 @@ public class Objekti : MonoBehaviour {
 		UgunsKoord = Ugunsdzeseji.GetComponent<RectTransform> ().localPosition;
 		//Uzvaras bildi uztaisa neredzamu
 		uzvarasPanelis.SetActive(false);
+		restartPoga.SetActive(false);
+		zvaigzne1.SetActive (false);
+		zvaigzne2.SetActive (false);
+		zvaigzne3.SetActive (false);
+
+
 	}
 
 	void Update () {
-		
 	}
 }

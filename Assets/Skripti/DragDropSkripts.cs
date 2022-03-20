@@ -16,6 +16,7 @@ public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 	}
 	public void OnBeginDrag(PointerEventData notikums){
 		Debug.Log ("Uzsakts objekta vilksana!");
+		//Padarina objektu caurspidigak
 		kanvasGrupa.alpha = 0.6F;
 		kanvasGrupa.blocksRaycasts = false;
 		objektuSkripts.pedejaisVilktais = null;
@@ -26,6 +27,7 @@ public class DragDropSkripts : MonoBehaviour, IPointerDownHandler, IBeginDragHan
 	}
 	public void OnEndDrag(PointerEventData notikums){
 		Debug.Log ("Objekta vilksanas partraukta!");
+		//Padarina objektu pilnu
 		kanvasGrupa.alpha = 1F;
 		objektuSkripts.pedejaisVilktais = notikums.pointerDrag;
 		if (objektuSkripts.vaiIstajaVieta == false) {
