@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 
 public class Objekti : MonoBehaviour {
+	//Esosa kanva
 	public Canvas kanva;
 	//SpelesObjekti
 	public GameObject atkritumaMasina;
@@ -41,20 +42,30 @@ public class Objekti : MonoBehaviour {
 	public Vector2 CemeKoord;
 	[HideInInspector]
 	public Vector2 UgunsKoord;
+	//Uzglabās audio avotu, kurā atskaņot attēlu skaņas efektus
 	public AudioSource skanasAvots;
+	//Masīvs, kas uzglabā visas iespējamās skaņas
 	public AudioClip[] skanasKoAtskanot;
+	//Mainīgais piefiksē vai objekts nolikts īstajāvietā (true/false)
 	[HideInInspector]
 	public bool vaiIstajaVieta = false;
+	//Uzglabās pēdējo objektu, kurš pakustināts
 	public GameObject pedejaisVilktais = null;
-	public int punkti=0;//Punkti;
-	public GameObject uzvarasPanelis;//Uzvaras logs
-	public GameObject restartPoga;//Restartesanas poga
-	//Zvaigznu vertejums
+	//Punkti;
+	public int punkti=0;
+	//Uzvaras logs
+	public GameObject uzvarasPanelis;
+	//Restartesanas poga
+	public GameObject restartPoga;
+	//Zvaigznu vertejumi
 	public GameObject zvaigzne1;
 	public GameObject zvaigzne2;
 	public GameObject zvaigzne3;
+	//Laika vertiba
 	public float laiks;
+	//Vai laiks tiek skaitits
 	public bool laiksAktivs=true;
+	//Teksts, kas parada laiku.
 	public Text parada;
 
 
@@ -71,16 +82,14 @@ public class Objekti : MonoBehaviour {
 		TZalKoord = TraktorsZal.GetComponent<RectTransform> ().localPosition;
 		CemeKoord = Cements.GetComponent<RectTransform> ().localPosition;
 		UgunsKoord = Ugunsdzeseji.GetComponent<RectTransform> ().localPosition;
-		//Uzvaras bildi uztaisa neredzamu
+		//Uzvaras komponetus uztaisa neredzamus
 		uzvarasPanelis.SetActive(false);
 		restartPoga.SetActive(false);
 		zvaigzne1.SetActive (false);
 		zvaigzne2.SetActive (false);
 		zvaigzne3.SetActive (false);
+		parada.GetComponent<Text> ().enabled = false;
 
 
-	}
-
-	void Update () {
 	}
 }
