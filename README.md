@@ -10,3 +10,4 @@ Unity 2D spele, kas nodrošina objektu vilkšanu, nolikšanu.
 - [x] Punktu sistēmas ieviešanai
 - [x] Objektu izmēra maiņas iespēju integrēšana
 - [x] Objektu rotācija 
+- [x] Scene Maina 
