@@ -8,7 +8,7 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 	private Vector2 vietasIzm, velkObjIzm;
 	private float xIzmeruStarp, yIzmeruStarp;
 	public Objekti objektuSkripts;
-	public Uzvara uzvaruSkripts;
+	public int punkti1;
 	public void OnDrop(PointerEventData notikums){
 		if (notikums.pointerDrag != null) {
 			if (notikums.pointerDrag.tag.Equals (tag)) {
@@ -27,47 +27,47 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					switch (notikums.pointerDrag.tag) {
 					case "Atkritumi":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [1]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Slimnica":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [2]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Autobuss":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [3]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "b2":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [4]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "e46":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Eskavators":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [6]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Policija":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [7]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "TraktorsDz":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [8]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "TraktorsZal":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [9]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Cements":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [5]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					case "Ugundzesejs":
 						objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [10]);
-						uzvaruSkripts.punkti++;
+						objektuSkripts.punkti++;
 						break;
 					default:
 						Debug.Log ("Nedefinēts tags!");
@@ -119,5 +119,10 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 			}
 
 		}
+		if (objektuSkripts.punkti == 11) {
+			objektuSkripts.uzvarasPanelis.SetActive (true);
+			objektuSkripts.skanasAvots.PlayOneShot (objektuSkripts.skanasKoAtskanot [11]);
+		}
    }
+
 }

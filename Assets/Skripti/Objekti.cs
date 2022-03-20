@@ -42,7 +42,11 @@ public class Objekti : MonoBehaviour {
 	[HideInInspector]
 	public bool vaiIstajaVieta = false;
 	public GameObject pedejaisVilktais = null;
+	public int punkti=0;//Punkti;
+	public GameObject uzvarasPanelis;
+
 	void Start () {
+		//Dabu masinu koordinates
 		atkrKoord = atkritumaMasina.GetComponent<RectTransform> ().localPosition;	
 		atroKoord = atraPalidziba.GetComponent<RectTransform> ().localPosition;	
 		bussKoord = autobuss.GetComponent<RectTransform> ().localPosition;	
@@ -54,6 +58,8 @@ public class Objekti : MonoBehaviour {
 		TZalKoord = TraktorsZal.GetComponent<RectTransform> ().localPosition;
 		CemeKoord = Cements.GetComponent<RectTransform> ().localPosition;
 		UgunsKoord = Ugunsdzeseji.GetComponent<RectTransform> ().localPosition;
+		//Uzvaras bildi uztaisa neredzamu
+		uzvarasPanelis.SetActive(false);
 	}
 
 	void Update () {
