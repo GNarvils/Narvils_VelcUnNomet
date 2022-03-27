@@ -119,13 +119,13 @@ public class NomesanasVieta : MonoBehaviour, IDropHandler {
 					objektuSkripts.TraktorsDz.GetComponent<RectTransform> ().localPosition = objektuSkripts.TDzKoord;
 					break;
 				case "TraktorsZal":
-					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.CemeKoord;
+					objektuSkripts.TraktorsZal.GetComponent<RectTransform> ().localPosition = objektuSkripts.TZalKoord;
 					break;
 				case "Cements":
-					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.UgunsKoord;
+					objektuSkripts.Cements.GetComponent<RectTransform> ().localPosition = objektuSkripts.CemeKoord;
 					break;
 				case "Ugundzesejs":
-					objektuSkripts.TraktorsZal.GetComponent<RectTransform> ().localPosition = objektuSkripts.TZalKoord;
+					objektuSkripts.Ugunsdzeseji.GetComponent<RectTransform> ().localPosition = objektuSkripts.UgunsKoord;
 					break;
 
 				default:
